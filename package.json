@@ -1,0 +1,11 @@
+{
+  "name": "hersotranslator",
+  "version": "1.0.7",
+  "description": "for translate with attributes",
+  "main": "hersoTranslator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joselito",
+  "license": "ISC"
+}
