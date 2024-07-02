@@ -1,11 +1,22 @@
 {
-  "name": "hersotranslator",
-  "version": "1.0.7",
-  "description": "for translate with attributes",
-  "main": "hersoTranslator.js",
+  "name": "herso-cms-utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hermosasoftware/herso-cms-utils.git",
+  "author": "Jose Morales <ol125@hotmail.es>",
+  "license": "MIT",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
-  "author": "joselito",
-  "license": "ISC"
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.6"
+  }
 }
