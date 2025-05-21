@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "module": "commonjs",
     "target": "es5",
-    "strict": true, // Opcional, según tus necesidades
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "module": "esnext",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true
   },
-  "include": ["src/**/*"]
+  "include": ["src"]
 }

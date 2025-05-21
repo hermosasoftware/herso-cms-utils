@@ -1,41 +1,40 @@
-import { filter, forEach, get } from 'lodash';
-import { 
-  TRANSLATOR_PROP_NAME,
-  CONDITIONAL_PROP_NAME,
-  STORAGE_CURRENT_LANGUAGE
-} from './common/variables';
+import { STORAGE_CURRENT_LANGUAGE, TRANSLATOR_PROP_NAME } from "./common/variables";
 
+const HERSO_SELECTED_LNG = localStorage.getItem(STORAGE_CURRENT_LANGUAGE)
 
-const submitType = new RegExp('submit', 'i');
-const selectedLanguage = localStorage.getItem(STORAGE_CURRENT_LANGUAGE)
-
-const toggleLanguaje = (language: string ) => {
-  localStorage.setItem(STORAGE_CURRENT_LANGUAGE, language);
-  document.location.reload();
+export function toggleLanguage(language: string) {
+    localStorage.setItem(STORAGE_CURRENT_LANGUAGE, language);
+    document.location.reload();
 }
 
-const hersoTranslator = (dictionary: Object) => {
-  const filterString = !!document.querySelector(`[herso-conditional="${selectedLanguage}"]`) ? selectedLanguage : "default";
-  const langTranslatorPropName = `[${selectedLanguage}-${TRANSLATOR_PROP_NAME}]`;
+const submitType = new RegExp('submit', 'i');
 
-  const elementsToTranslate:  NodeListOf<Element> = document.querySelectorAll(`[${langTranslatorPropName}], [${TRANSLATOR_PROP_NAME}]`);
-
-  forEach(elementsToTranslate, (element) => {
-    const elementKey = get(element, `attributes.${TRANSLATOR_PROP_NAME}.value`);
-    const keyByLang = get(element, `attributes.${langTranslatorPropName}.value`, '');
-    const tr: string = get(dictionary, `${selectedLanguage}.${elementKey}`, '') || keyByLang;
-      if (element instanceof HTMLInputElement) {
-        if(submitType.test(element.type)) {
-            element.value = tr
+export const hersoTranslator = (dictionary: any) => {
+    const langTranslatorPropName = `${HERSO_SELECTED_LNG}-${TRANSLATOR_PROP_NAME}`;
+    const lngItems: Element[] = Array.from(document.querySelectorAll(`[${langTranslatorPropName}]`));
+    lngItems.forEach(element => {
+        const elementTranslationKeyValue = element.attributes.getNamedItem(langTranslatorPropName)?.value;
+        const tranlationKeys = elementTranslationKeyValue?.split('.');
+        const translation = tranlationKeys?.reduce((acc, key) => {
+            if (acc && typeof acc === 'object' && key in acc) {
+              return acc[key];
+            }
+            return undefined;
+          }, dictionary[HERSO_SELECTED_LNG ?? '']) ?? elementTranslationKeyValue;
+        if (element instanceof HTMLInputElement) {
+            if (submitType.test(element.type)) {
+                element.value = translation;
+            } else {
+                element.placeholder = translation;
+            }
         } else {
-            element.placeholder = tr
+            element.textContent = translation;
         }
-      } else {
-        element.textContent = tr
-      }
-  })
+    });
+}
 
-  const allConditionalElements: NodeListOf<Element> = document.querySelectorAll(CONDITIONAL_PROP_NAME);
-  const filteredConditionalElements = filter(allConditionalElements, (elem) => get(elem, 'elem.attributes.herso-conditional.value') === filterString)
-  forEach(filteredConditionalElements, (elem) => elem.remove())
+if (typeof window !== "undefined") {
+    (window as any).toggleLanguage = toggleLanguage;
+    (window as any).hersoTranslator = hersoTranslator;
+    (window as any).HERSO_SELECTED_LNG = HERSO_SELECTED_LNG;
 }
