@@ -20,7 +20,11 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    library: '[name]',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    iife: false // Desactiva la envoltura IIFE
   },
   optimization: {
     minimize: false

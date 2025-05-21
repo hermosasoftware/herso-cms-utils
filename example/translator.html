@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página con Botón</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+    #mensaje {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¡Hola, bienvenido!</h1>
+  <button onclick="mostrarMensaje()">Haz clic aquí</button>
+  <p id="mensaje"></p>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").textContent = "¡Has hecho clic en el botón!";
+    }
+  </script>
+
+</body>
+</html>
