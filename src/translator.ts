@@ -28,7 +28,7 @@ export const hersoTranslator = (dictionary: any) => {
                 element.placeholder = translation;
             }
         } else {
-            element.innerHTML = translation;
+            element.outerHTML = translation;
         }
     });
 }
