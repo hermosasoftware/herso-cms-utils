@@ -1,6 +1,6 @@
 import { STORAGE_CURRENT_LANGUAGE, TRANSLATOR_PROP_NAME } from "./common/variables";
 
-const HERSO_SELECTED_LNG = localStorage.getItem(STORAGE_CURRENT_LANGUAGE)
+const HERSO_SELECTED_LNG = localStorage.getItem(STORAGE_CURRENT_LANGUAGE);
 
 export function toggleLanguage(language: string) {
     localStorage.setItem(STORAGE_CURRENT_LANGUAGE, language);
