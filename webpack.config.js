@@ -4,7 +4,8 @@ module.exports = {
   mode: 'production',
   entry: {
     index: './src/index.ts',
-    translator: './src/translator.ts'
+    translator: './src/translator.ts',
+    conditional: './src/conditional.ts'
   },
   output: {
     filename: '[name].js',
