@@ -34,6 +34,7 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/hermosasoftware/herso-cms-utils@main/dist/translator.js"></script>
+    <script src="../dist/conditional.js"></script>
     <script>
         const lang = localStorage.getItem('page_prefered_language')
         if (!lang) {
@@ -58,11 +59,16 @@
     <h1 en-herso-translator="welcome">¡Hola, bienvenido!</h1>
     <button en-herso-translator="click" onclick="mostrarMensaje()">Haz clic aquí para traducir</button>
     <p id="mensaje"></p>
-
+    <div herso-conditional="en">show en</div>
+    <div herso-conditional="es">show es</div>
     <script>
         function mostrarMensaje() {
-            toggleLanguage(HERSO_SELECTED_LNG === 'es' ? 'en' : 'es')
+            toggleLanguage(HERSO_SELECTED_LNG === 'es' ? 'en' : 'es');
+            
         }
+        document.addEventListener("DOMContentLoaded", (event) => {
+            hersoConditional();
+        });
     </script>
 
 </body>
