@@ -21,7 +21,7 @@ export const hersoTranslator = (dictionary: any) => {
             }
             return undefined;
           }, dictionary[HERSO_SELECTED_LNG ?? '']) ?? elementTranslationKeyValue;
-        if (element instanceof HTMLInputElement) {
+        if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) {
             if (submitType.test(element.type)) {
                 element.value = translation;
             } else {
