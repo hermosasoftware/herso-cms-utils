@@ -26,7 +26,7 @@
     "Home": {
         "title": "WE BOOST YOUR<br> NEXT INTERNATIONAL DESTINATION",
         "subTitle": "I want to get a scholarship abroad",
-        "imReady": "I'm ready!",
+        "imReady": "Contact!",
         "applynow": "¡Apply now!",
         "aboutPropella": {
             "title": "About Propella",
@@ -141,7 +141,7 @@
         "faq6Answer": "Sports scholarships are used by coaches to recruit the best athletes to their team. They are not based on the financial need of the student, but on what they deserve based on their athletic level.",
         "faq7Question": "Are scholarships exclusively for students who compete at a high level?",
         "faq7Answer": "It is possible to find alternatives for all student‑athlete profiles.",
-        "admissionsCounselingTitle": "ADMISSIONS COUNSELING FOR UNIVERSITY APPLICATIONS",
+        "admissionsCounselingTitle": "COLLEGE COUNSELING FOR UNIVERSITY APPLICATIONS",
         "admissionsCounselingSubtitle": "Personalized support for every stage of the university admissions process",
         "admissionsCounselingIntro": "At Propella, we provide strategic guidance for students who wish to apply to universities abroad. Our support is comprehensive and tailored to each profile, and includes (but is not limited to):",
         "admissionsCounselingList1": "Researching universities and building personalized lists",
@@ -454,6 +454,26 @@
             "list4": "Available year‑round with full logistical support",
             "pdfShortProgram": "Download Customized Short‑Term Program PDF"
         },
+        "card5": {
+            "title": "Spanish Immersion",
+            "subtitle": "Learn Spanish in Costa Rica — not just in class, but through life itself.",
+            "list1": "15–20 hours per week of certified Spanish instruction",
+            "list2": "Live with a local host family for full cultural exposure",
+            "list3": "Weekly cultural activities and weekend excursions",
+            "list4": "Community-based language application projects",
+            "list5": "Available in 2, 4, or 8-week formats, or tailored for groups",
+            "pdfSpanishImmersion": "Download Spanish Immersion Program PDF"
+        },
+        "card6": {
+            "title": "Volunteer Experience",
+            "subtitle": "Make a difference while immersing in Costa Rican culture.",
+            "list1": "Hands-on work in wildlife rescue, reforestation, or community education",
+            "list2": "Collaborate with trusted partners like Toucan Rescue or Propella Foundation",
+            "list3": "Daily service hours with mentorship and structured guidance",
+            "list4": "Cultural immersion through host family stay and local activities",
+            "list5": "Offered in 2, 4, or 8–12-week durations, with custom options",
+            "pdfVolunteerExperience": "Download Volunteer Experience Program PDF"
+        },
         "plan": {
             "title": "Come to Costa Rica with Propella",
             "subtitle": "Let’s build your Costa Rica experience together",
@@ -507,8 +527,20 @@
             "studyAbroadHighSchool": "Study Abroad - High School",
             "studyAbroadUniversity": "Study Abroad - University",
             "internshipExperience": "Internship Experience",
-            "gapYearProgram": "Gap Year Program",
-            "shortTermProgram": "Short-Term Educational Program"
+            "gapYearProgram": "Gap Year Program (From 8 weeks to 9 months)",
+            "shortTermProgram": "Short-Term Educational Program",
+            "SpanishImmersion": {
+                "2WeeksIntensiveShort": "2 Weeks Intensive Short",
+                "4WeeksStandard": "4 Weeks Standard",
+                "8WeeksAdvanced": "8 Weeks Advanced",
+                "CustomGroupOrFlexibleDuration": "Custom Group or Flexible Duration"
+            },
+            "VolunteerExperience": {
+                "2WeeksShortImpact": "2 Weeks Short Impact",
+                "4WeeksStandard": "4 Weeks Standard",
+                "812WeeksExtendedVolunteering": "8–12 Weeks Extended Volunteering",
+                "CustomGroupOrFlexibleDuration": "Custom Group or Flexible Duration"
+            }
         },
         "contact": {
             "title": "Contact Us",
@@ -562,7 +594,7 @@
         "mainDescription": "Our company provides services in the education, tourism, and sports industries.",
         "sportsScholarshipsTitle": "SPORTS SCHOLARSHIPS",
         "sportsScholarshipsDesc": "We help athletes obtain scholarships at international universities, combining education and sports for their comprehensive development.",
-        "academicCounselingTitle": "ACADEMIC COUNSELING",
+        "academicCounselingTitle": "COLLEGE COUNSELING",
         "academicCounselingDesc": "We offer personalized guidance for students to find educational opportunities abroad.",
         "tutoringTitle": "SAT, DUOLINGO, TOEFL TUTORING",
         "tutoringDesc": "We prepare students with specialized tutoring to improve their performance in standardized exams.",
