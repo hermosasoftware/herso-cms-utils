@@ -21,7 +21,8 @@
         "educationalServices": "Educational Services",
         "country": "Country",
         "phoneNumber": "Phone Number",
-        "discoverCR": "Discover Costa Rica"
+        "discoverCR": "Discover Costa Rica",
+        "successStories": "Success stories"
     },
     "Home": {
         "title": "WE BOOST YOUR<br> NEXT INTERNATIONAL DESTINATION",
@@ -405,7 +406,7 @@
         }
     },
     "come-to-costa-rica": {
-        "title": "Come to Costa Rica. Learn Without Borders.",
+        "title": "Come to Costa Rica. Learn Beyond Borders.",
         "subtitle": "Join a global community of students and young professionals who grow through real‑world experiences in Costa Rica.",
         "about": {
             "title": "About the Program",
